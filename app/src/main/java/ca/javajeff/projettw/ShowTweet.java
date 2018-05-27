@@ -15,6 +15,9 @@ import com.twitter.sdk.android.tweetui.CompactTweetView;
 import com.twitter.sdk.android.tweetui.TweetUtils;
 import com.twitter.sdk.android.tweetui.TweetView;
 
+/**
+ * this class queries the twitter database for a single tweet
+ */
 public class ShowTweet extends AppCompatActivity {
 
     @Override

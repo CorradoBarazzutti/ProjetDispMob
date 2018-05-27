@@ -16,10 +16,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.android.support:design:27.1.1'
@@ -31,6 +35,16 @@ dependencies {
     // Include all the Twitter APIs
     implementation 'com.twitter.sdk.android:twitter-core:3.1.1'
     implementation 'com.twitter.sdk.android:tweet-ui:3.1.1'
+    // include Twitter4j package
+    implementation 'org.twitter4j:twitter4j-core:4.0.1'
+    implementation 'org.twitter4j:twitter4j-stream:4.0.1'
+    // Include openNLP
+    implementation 'org.apache.opennlp:opennlp-tools:1.7.2'
+    // Include coreNPL
+    compile 'edu.stanford.nlp:stanford-corenlp:3.3.0'
+    compile 'edu.stanford.nlp:stanford-corenlp:3.3.0:models'
+
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
 }
 
 repositories {

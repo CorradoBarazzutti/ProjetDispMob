@@ -13,6 +13,9 @@ import com.twitter.sdk.android.tweetui.TweetView;
 import com.twitter.sdk.android.tweetui.CompactTweetView;
 import com.twitter.sdk.android.tweetui.TweetView;
 
+/**
+ * This class provides the adapter for a tweet recycle view
+ */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private TweetView[] mDataset;
 
@@ -28,13 +31,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         }
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
+    /**
+     * Provide a suitable constructor (depends on the kind of dataset)
+     * @param myDataset
+     */
     public MyAdapter(TweetView[] myDataset) {
         mDataset = myDataset;
     }
 
-    // Create new views (invoked by the layout manager)
-    // Create new views (invoked by the layout manager)
+    /**
+     * Create new views (invoked by the layout manager)
+     * @param parent
+     * @param viewType
+     * @return view holder
+     */
     @Override
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                    int viewType) {
@@ -45,7 +55,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+
+
+    /**
+     * Replace the contents of a view (invoked by the layout manager)
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
@@ -54,7 +70,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    /**
+     * Return the size of your dataset (invoked by the layout manager)
+     * @return dataset lenght
+     */
     @Override
     public int getItemCount() {
         return mDataset.length;

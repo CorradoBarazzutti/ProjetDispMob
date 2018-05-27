@@ -98,3 +98,4 @@
 0	Ugly hat
 1	Big hug and lots of love
 1	I hope you have a wonderful celebration
+0   Monday should be changed to shitday
